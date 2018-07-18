@@ -1,0 +1,19 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+button { 
+  color: #ffffff; 
+  background-color: #611BBD; 
+  border-color: #130269;
+  padding: 5px 10px;
+} 
+ 
+button:hover, 
+button:focus, 
+button:active { 
+  color: #ffffff; 
+  background-color: #49247A; 
+  border-color: #130269; 
+}

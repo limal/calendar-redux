@@ -1,0 +1,14 @@
+.CalendarHeader {
+    align-content: stretch;
+    display: flex;
+    flex-grow: 1;
+}
+
+.CalendarHeader__Weekday {
+    border: solid 1px #333;
+    flex-direction: column;
+    flex: 1 1 0;
+    line-height: 30px;
+    list-style: none;
+    min-height: 30px;
+}

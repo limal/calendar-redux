@@ -1,0 +1,55 @@
+.CalendarReminderBlur {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    filter: blur(20px);
+}
+
+    .CalendarReminderBlur--hidden {
+        display: none;
+    }
+
+.CalendarReminder {
+    background: #fff;
+    border: solid 1px #333;
+    border-radius: 9px;
+    box-shadow: 10px 10px 30px -5px rgba(0,0,0,0.75);
+    left: 0;
+    margin: 100px auto;
+    max-width: 500px;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: 50%;
+}
+
+    .CalendarReminder--hidden {
+        display: none;
+    }
+
+    .CalendarReminder__Close {
+        cursor: pointer;
+        color: #0000ff;
+        text-align: right;
+    }
+
+.CalendarReminder_AddForm {
+    margin: 30px 0;
+}
+
+    /* no time left for doing BEM now - hardcoding */
+    .CalendarReminder_AddForm input {
+        font-size: 16px;
+        padding: 5px 10px;
+        margin-right: 10px;
+    }
+
+.CalendarReminder__Reminder {
+    margin: 10px 0 0 0;
+    text-align: left;
+}
+
+.CalendarReminder__Reminder__Time {
+    color: #f00;
+}

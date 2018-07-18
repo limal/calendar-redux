@@ -1,0 +1,49 @@
+.CalendarDay {
+    border: solid 1px #333;
+    cursor: pointer;
+    flex: 1 1 0;
+    list-style: none;
+    padding-top: 5px;
+    position: relative;
+}
+
+    .CalendarDay--outband {
+        background: #ccc;
+        opacity: 0.25;
+    }
+
+.CalendarDay__Number {
+    left: 5px;
+    position: absolute;
+    top: 5px;
+}
+
+.CalendarDay__RemindersList {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 80%;
+}
+
+.CalendarDay__Reminder {
+    color: #f0f;
+    padding-left: 26px;
+}
+
+.CalendarDay__Reminder__Time {
+    color: #f00;
+    font-weight: bold;
+}
+
+.CalendarDay__Reminder__Overflow {
+    width: 30px;
+    height: 30px;
+    background: #f00;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 26px;
+    color: #fff;
+    padding: 10px;
+    font-size: 23px;
+}
