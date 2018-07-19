@@ -4,6 +4,12 @@ Thanks for looking into the project. It was bootstrapped with [Create React App]
 
 So all usual npm tasks works here as well. Below 
 
+## Live Demo
+
+Access the live demo on [https://limal.github.io/calendar-redux-demo/](https://limal.github.io/calendar-redux-demo/).
+
+![Calendar Redux screenshot](calendar-redux.png?raw=true "Calendar Redux in action")
+
 ## Available Scripts
 
 In the project directory, you can run:
