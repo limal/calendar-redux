@@ -20,7 +20,8 @@ export default function (state = initialState, action) {
 
             // encode the reminders in base64 because the ISO string contains '.' characters that messes the dotProp's path to the right object
             if (typeof state.reminders[btoa(action.activeReminder)] !== 'undefined') {
-                return dotProp.set(state, `reminders.${btoa(action.activeReminder)}`, [ ...state.reminders[btoa(action.activeReminder)], reminder])
+                // sort reminders on insert
+                return dotProp.set(state, `reminders.${btoa(action.activeReminder)}`, [ ...state.reminders[btoa(action.activeReminder)], reminder].sort((r1, r2) => r1.time > r2.time))
             } else {
                 return dotProp.set(state, `reminders.${btoa(action.activeReminder)}`, [ reminder ])
             }

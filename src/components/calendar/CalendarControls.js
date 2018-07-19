@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import * as moment from 'moment'
 import './CalendarControls.css'
-import { isMoment } from 'moment';
 
 class CalendarControls extends PureComponent {
     render() {

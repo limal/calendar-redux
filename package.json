@@ -2,6 +2,7 @@
   "name": "calendar-redux",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://limal.github.io/calendar-redux-demo",
   "dependencies": {
     "dot-prop-immutable": "^1.4.0",
     "moment": "^2.22.2",

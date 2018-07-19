@@ -53,10 +53,6 @@ class Calendar extends PureComponent {
     }
 
     render() {
-        const {
-            showReminders
-        } = this.props
-
         return (
             <div className="Calendar">
                 <div className="CalendarScreen">
@@ -82,7 +78,5 @@ class Calendar extends PureComponent {
 export default connect(
     state => ({
         deltaMonth: state.calendar.deltaMonth
-    }),
-    dispatch => ({
     })
 )(Calendar)

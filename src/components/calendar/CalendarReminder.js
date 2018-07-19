@@ -30,7 +30,7 @@ class CalendarReminder extends PureComponent {
             activeReminder,
             addReminder,
             closeReminder,
-            reminders
+            rawReminders
         } = this.props
 
         const {
@@ -38,7 +38,7 @@ class CalendarReminder extends PureComponent {
             reminderTime
         } = this.state
 
-        const allReminders = reminders[btoa(activeReminder)]
+        const reminders = rawReminders[btoa(activeReminder)]
 
         return [
             <div onClick={closeReminder} className={`CalendarReminderBlur ${activeReminder ? '' : 'CalendarReminderBlur--hidden'}`} key="1">
@@ -47,10 +47,10 @@ class CalendarReminder extends PureComponent {
                 <div className="CalendarReminder__Close" onClick={closeReminder}>Close [x]</div>
                 <span className="CalendarReminder__Title">{moment(activeReminder).format('D MMMM Y')}</span>
 
-                {typeof allReminders !== 'undefined' ?
-                    allReminders.map((reminder, i) => (
-                        <div className="CalendarReminder__Reminder" key={i}><span className="CalendarReminder__Reminder__Time">{reminder.time}</span>: "{reminder.text}"</div>)
-                    ) : ''}
+                {typeof reminders !== 'undefined' &&
+                    reminders.map((reminder, i) => (
+                        <div className="CalendarReminder__Reminder" key={i}><span className="CalendarReminder__Reminder__Time">{reminder.time}</span> {reminder.text}</div>)
+                    )}
 
                 <div className="CalendarReminder_AddForm">
                     <input placeholder="Enter your reminder..." type="text" name="reminderText" value={reminderText} onChange={this.handleChange} />
@@ -66,7 +66,7 @@ export default connect(
     state => ({
         activeReminder: state.calendar.activeReminder,
         deltaMonth: state.calendar.deltaMonth,
-        reminders: state.calendar.reminders
+        rawReminders: state.calendar.reminders
     }),
     dispatch => ({
         addReminder: (reminderText, reminderTime, activeReminder) => {
