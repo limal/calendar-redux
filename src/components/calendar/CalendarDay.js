@@ -22,8 +22,6 @@ class CalendarDay extends PureComponent {
             <li onClick={() => showReminders(day)} className={`CalendarDay ${isOutband ? '' : 'CalendarDay--outband'}`}>
                 <span className="CalendarDay__Number">{day.format('D')}</span>
 
-                { console.log(reminders) }
-
                 {typeof reminders !== 'undefined' &&
                     (reminders.length < overflowThreshold ? <Reminders items={reminders} />
                     :  <ReminderOverflow count={reminders.length}/>) }
